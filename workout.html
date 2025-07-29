@@ -1,0 +1,121 @@
+<!-- workout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Pro - Workouts</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Fitness Pro</h1>
+    <ul class="flex gap-4">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="workout.html" class="text-blue-600 font-medium">Workouts</a></li>
+      <li><a href="calorie.html">Calorie Calc</a></li>
+      <li><a href="bmi.html">BMI</a></li>
+      <li><a href="tips.html">Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center bg-blue-500 text-white py-10">
+    <h2 class="text-4xl font-bold mb-2">Workout Categories 💥</h2>
+    <p>Pick your target area and follow our prebuilt weekly routines</p>
+  </header>
+
+  <!-- Workout Categories -->
+  <section class="p-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-blue-600 mb-2">🏋️ Chest</h3>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Push-Ups</li>
+        <li>Incline Dumbbell Press</li>
+        <li>Chest Flys</li>
+        <li>Bench Press</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-green-600 mb-2">🏋️ Back</h3>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Pull-Ups</li>
+        <li>Lat Pulldown</li>
+        <li>Deadlifts</li>
+        <li>Bent Over Rows</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-red-600 mb-2">🏋️ Arms</h3>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Bicep Curls</li>
+        <li>Tricep Dips</li>
+        <li>Hammer Curls</li>
+        <li>Skull Crushers</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-yellow-600 mb-2">🏋️ Legs</h3>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Squats</li>
+        <li>Lunges</li>
+        <li>Leg Press</li>
+        <li>Calf Raises</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-purple-600 mb-2">🏋️ Full Body</h3>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Burpees</li>
+        <li>Mountain Climbers</li>
+        <li>Jumping Jacks</li>
+        <li>Plank to Push-Up</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Weekly Workout Plan -->
+  <section class="p-6 mt-10 bg-gray-50 rounded-lg shadow-lg mx-4">
+    <h3 class="text-2xl font-bold text-center text-indigo-600 mb-6">🗓 Weekly Workout Plan</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Mon – Chest & Triceps</h4>
+        <p>Push-ups, Bench Press, Dips</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Tue – Back & Biceps</h4>
+        <p>Pull-ups, Rows, Curls</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Wed – Rest or Cardio</h4>
+        <p>Jogging, Jump Rope, Light Stretching</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Thu – Legs</h4>
+        <p>Squats, Lunges, Deadlifts</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Fri – Shoulders & Core</h4>
+        <p>Overhead Press, Planks, Crunches</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Sat – Full Body HIIT</h4>
+        <p>Burpees, Jump Squats, Mountain Climbers</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-bold mb-2">Sun – Rest Day</h4>
+        <p>Recovery, Hydration, Light Walk</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-6 mt-10">
+    &copy; 2025 Fitness Pro. All rights reserved.
+  </footer>
+
+</body>
+</html>

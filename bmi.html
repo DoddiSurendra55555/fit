@@ -1,0 +1,66 @@
+<!-- bmi.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Pro - BMI Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Fitness Pro</h1>
+    <ul class="flex gap-4">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="workout.html">Workouts</a></li>
+      <li><a href="calorie.html">Calorie Calc</a></li>
+      <li><a href="bmi.html" class="text-blue-600 font-medium">BMI</a></li>
+      <li><a href="tips.html">Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center bg-indigo-500 text-white py-10">
+    <h2 class="text-4xl font-bold mb-2">BMI Calculator 🧮</h2>
+    <p>Know your body mass index and understand your category</p>
+  </header>
+
+  <!-- Calculator Container -->
+  <section class="max-w-4xl mx-auto p-6 grid md:grid-cols-2 gap-6">
+    <!-- Form -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold mb-4 text-indigo-600">Enter Your Details</h3>
+      <form id="bmiForm">
+        <div class="mb-4">
+          <label for="height" class="block font-medium mb-1">Height (cm)</label>
+          <input type="number" id="height" class="w-full border border-gray-300 rounded px-3 py-2" required>
+        </div>
+        <div class="mb-4">
+          <label for="weight" class="block font-medium mb-1">Weight (kg)</label>
+          <input type="number" id="weight" class="w-full border border-gray-300 rounded px-3 py-2" required>
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
+          Calculate BMI
+        </button>
+      </form>
+      <div id="bmiResult" class="mt-4 text-lg font-semibold text-center text-gray-700"></div>
+    </div>
+
+    <!-- Gauge -->
+    <div class="flex flex-col items-center justify-center bg-white rounded-lg shadow p-6">
+      <h4 class="text-lg font-semibold mb-2">BMI Range</h4>
+      <canvas id="bmiGauge" width="300" height="150"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-6 mt-10">
+    &copy; 2025 Fitness Pro. All rights reserved.
+  </footer>
+
+  <script src="js/bmi.js"></script>
+</body>
+</html>

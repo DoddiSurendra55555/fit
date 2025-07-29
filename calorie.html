@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Food Calorie Calculator + Workout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 450px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #d35400;
+      margin-bottom: 20px;
+    }
+    img {
+      display: block;
+      margin: 0 auto 25px auto;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+      font-size: 1.1em;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1.8px solid #d35400;
+      border-radius: 6px;
+      background-color: #fff;
+      box-sizing: border-box;
+      color: #333;
+      outline-offset: 2px;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.2em;
+      background-color: #e67e22;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 15px;
+    }
+    button:hover {
+      background-color: #d35400;
+    }
+    #result {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #27ae60;
+      text-align: center;
+      min-height: 3em;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Food Calorie Calculator + Workout</h1>
+
+<img src="./assets/images/image.png" alt="Healthy Indian Food" />
+
+<label for="food">Select Food:</label>
+<select id="food" aria-label="Select Food">
+  <option value="">-- Select a food item --</option>
+  <option value="130">Rice (cooked) - 130 kcal/100g</option>
+  <option value="71">Chapati (whole wheat) - 71 kcal/100g</option>
+  <option value="116">Dal (lentils) - 116 kcal/100g</option>
+  <option value="265">Paneer - 265 kcal/100g</option>
+  <option value="262">Samosa - 262 kcal/100g</option>
+  <option value="165">Chicken Breast - 165 kcal/100g</option>
+  <option value="155">Egg - 155 kcal/100g</option>
+  <option value="42">Milk (whole) - 42 kcal/100ml</option>
+  <option value="240">Butter - 240 kcal/100g</option>
+  <option value="89">Banana - 89 kcal/100g</option>
+  <option value="52">Apple - 52 kcal/100g</option>
+  <option value="97">Carrot - 97 kcal/100g</option>
+  <option value="40">Tomato - 40 kcal/100g</option>
+  <option value="150">Masala Dosa - 150 kcal/100g</option>
+  <option value="350">Gulab Jamun - 350 kcal/100g</option>
+  <option value="277">Naan Bread - 277 kcal/100g</option>
+  <option value="120">Idli - 120 kcal/100g</option>
+  <option value="200">Paneer Tikka - 200 kcal/100g</option>
+  <option value="190">Chole (Chickpea curry) - 190 kcal/100g</option>
+  <option value="85">Cucumber - 85 kcal/100g</option>
+  <option value="30">Lemon - 30 kcal/100g</option>
+  <option value="70">Potato (boiled) - 70 kcal/100g</option>
+  <option value="190">Vegetable Biryani - 190 kcal/100g</option>
+  <option value="300">Butter Chicken - 300 kcal/100g</option>
+  <option value="280">Kheer (Rice pudding) - 280 kcal/100g</option>
+  <option value="150">Pav Bhaji - 150 kcal/100g</option>
+  <option value="50">Spinach - 50 kcal/100g</option>
+  <option value="96">Orange - 96 kcal/100g</option>
+  <option value="450">Mysore Pak - 450 kcal/100g</option>
+  <option value="130">Idiyappam - 130 kcal/100g</option>
+  <option value="280">100ml milk & 50gm Oats - 280 kcal/150g</option>
+
+</select>
+
+<label for="quantity">Enter Quantity (grams or ml):</label>
+<input type="number" id="quantity" min="1" placeholder="e.g. 150" />
+
+<hr>
+
+<label for="activity">Select Activity (Calories burned per minute):</label>
+<select id="activity" aria-label="Select Activity">
+  <option value="">-- Select an activity --</option>
+  <option value="3.5">Walking (slow) ~3.5 kcal/min</option>
+  <option value="5">Walking (brisk) ~5 kcal/min</option>
+  <option value="7">Jogging ~7 kcal/min</option>
+  <option value="10">Running ~10 kcal/min</option>
+  <option value="8">Cycling (moderate) ~8 kcal/min</option>
+  <option value="6">Yoga ~6 kcal/min</option>
+  <option value="9">Aerobics ~9 kcal/min</option>
+  <option value="11">Swimming ~11 kcal/min</option>
+  <option value="4">House Cleaning ~4 kcal/min</option>
+  <option value="12">Jump Rope ~12 kcal/min</option>
+</select>
+
+<label for="duration">Enter Duration (minutes):</label>
+<input type="number" id="duration" min="1" placeholder="e.g. 30" />
+
+<button id="calculate">Calculate Calories</button>
+
+<div id="result"></div>
+
+<script>
+  document.getElementById('calculate').addEventListener('click', () => {
+    const foodSelect = document.getElementById('food');
+    const quantity = Number(document.getElementById('quantity').value);
+    const foodOption = foodSelect.options[foodSelect.selectedIndex];
+
+    const activitySelect = document.getElementById('activity');
+    const duration = Number(document.getElementById('duration').value);
+    const activityOption = activitySelect.options[activitySelect.selectedIndex];
+
+    if (!foodOption || !foodOption.value) {
+      alert('Please select a food item.');
+      return;
+    }
+    if (!quantity || quantity <= 0) {
+      alert('Please enter a valid quantity greater than zero.');
+      return;
+    }
+
+    // Calculate calories eaten
+    const caloriesEaten = (Number(foodOption.value) * quantity) / 100;
+
+    let caloriesBurned = 0;
+    let activityText = '';
+
+    if (activityOption && activityOption.value) {
+      if (!duration || duration <= 0) {
+        alert('Please enter a valid duration greater than zero.');
+        return;
+      }
+      caloriesBurned = Number(activityOption.value) * duration;
+      activityText = `Calories burned doing ${activityOption.textContent.split('~')[0].trim()} for ${duration} minutes: ${caloriesBurned.toFixed(2)} kcal.`;
+    }
+
+    const netCalories = caloriesEaten - caloriesBurned;
+
+    let resultText = `Calories consumed: ${caloriesEaten.toFixed(2)} kcal.`;
+
+    if (caloriesBurned > 0) {
+      resultText += `<br>${activityText}<br>Net Calories: ${netCalories.toFixed(2)} kcal.`;
+      if (netCalories < 0) {
+        resultText += ` <span style="color: #c0392b;">(Calorie deficit)</span>`;
+      } else if (netCalories > 0) {
+        resultText += ` <span style="color: #27ae60;">(Calorie surplus)</span>`;
+      } else {
+        resultText += ` <span style="color: #2980b9;">(Balanced)</span>`;
+      }
+    }
+
+    document.getElementById('result').innerHTML = resultText;
+  });
+</script>
+
+</body>
+</html>
